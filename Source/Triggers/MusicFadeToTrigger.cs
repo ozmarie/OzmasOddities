@@ -17,11 +17,13 @@ namespace Celeste.Mod.OzmasOddities.Triggers
         }
         public override void OnEnter(Player player)
         {
+            base.OnEnter(player);
             Audio.CurrentMusicEventInstance.getParameterValue(Parameter, out val, out float fval);
             FadeA = val;
         }
         public override void OnLeave(Player player)
         {
+            base.OnLeave(player);
             if(revertOnLeave)
             {
                 Audio.SetMusicParam(Parameter, val);

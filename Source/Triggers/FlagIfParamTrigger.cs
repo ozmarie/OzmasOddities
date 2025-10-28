@@ -20,7 +20,7 @@ namespace Celeste.Mod.OzmasOddities.Triggers
 
         public override void OnEnter(Player player)
         {
-            base.OnStay(player);
+            base.OnEnter(player);
             Level level = SceneAs<Level>();
             Audio.currentMusicEvent.getParameterValue(param, out float val, out float finalval);
             level.Session.SetFlag(flag, Math.Abs(val - paramval) < 0.01);

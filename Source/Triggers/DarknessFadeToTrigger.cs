@@ -22,6 +22,7 @@ namespace Celeste.Mod.OzmasOddities.Triggers
         }
         public override void OnEnter(Player player)
         {
+            base.OnEnter(player);
             if (!isSet)
             {
                 fadeFrom = SceneAs<Level>().Lighting.Alpha;
@@ -30,10 +31,12 @@ namespace Celeste.Mod.OzmasOddities.Triggers
         }
         public override void OnStay(Player player)
         {
+            base.OnStay(player);
             SceneAs<Level>().Lighting.Alpha = Calc.ClampedMap(GetPositionLerp(player, positionMode), 0f, 1f, fadeFrom, fadeTo);
         }
         public override void OnLeave(Player player)
         {
+            base.OnLeave(player);
             if(revertOnLeave)
             {
                 SceneAs<Level>().Lighting.Alpha = fadeFrom;

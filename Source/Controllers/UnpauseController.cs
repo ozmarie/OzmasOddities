@@ -10,11 +10,13 @@ namespace Celeste.Mod.OzmasOddities.Controllers
         public string flag;
         public UnpauseController(EntityData data, Vector2 offset) : base(data.Position + offset)
         {
+            base.Tag = Tags.PauseUpdate;
             flag = data.Attr("flag", "");
         }
 
-        public override void Render()
+        public override void Update()
         {
+            base.Update();
             Level level = SceneAs<Level>();
             if (string.IsNullOrEmpty(flag) || level.Session.GetFlag(flag) && !string.IsNullOrEmpty(flag))
             {
@@ -30,7 +32,6 @@ namespace Celeste.Mod.OzmasOddities.Controllers
                     level.unpauseTimer = 0.15f;
                 }
             }
-            base.Render();
         }
     }
 }
