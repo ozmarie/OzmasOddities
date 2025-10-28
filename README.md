@@ -1,4 +1,4 @@
-# Ozmas Oddities
+# Ozma's Oddities
 A small collection of extremely niche triggers and entities. Please use the issues tab for bugs and feature requests. I'm also open to PRs.
 
 ## Entities / Controllers
