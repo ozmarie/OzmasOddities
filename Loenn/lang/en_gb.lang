@@ -1,0 +1,77 @@
+entities.OzmasOddities/SpotlightController.placements.name.SpotlightController= Spotlight Controller
+entities.OzmasOddities/SpotlightController.placements.description.SpotlightController= Allows for modifications or disabling of the intro and outro spotlight wipe
+entities.OzmasOddities/SpotlightController.attributes.name.offsetX= X Offset
+entities.OzmasOddities/SpotlightController.attributes.description.offsetX= The distance from the player in pixels that the spotlight will center on
+entities.OzmasOddities/SpotlightController.attributes.name.offsetY= Y Offset
+entities.OzmasOddities/SpotlightController.attributes.description.offsetY= The distance from the player in pixels that the spotlight will center on
+entities.OzmasOddities/SpotlightController.attributes.name.introSoundEffect= Sound Effect: Intro
+entities.OzmasOddities/SpotlightController.attributes.description.introSoundEffect= Modifies the intro sound effect. Leave blank for silence
+entities.OzmasOddities/SpotlightController.attributes.name.outroSoundEffect= Sound Effect: Outro
+entities.OzmasOddities/SpotlightController.attributes.description.outroSoundEffect= Modifies the outro sound effect. Leave blank for silence
+entities.OzmasOddities/SpotlightController.attributes.name.duration= Duration (seconds)
+entities.OzmasOddities/SpotlightController.attributes.description.duration= Modifies the time the spotlight will take to clear. Extra time will be allocated to the middle of the routine. 0 will effectively disable it
+entities.OzmasOddities/SpotlightController.attributes.name.disableSpotlight= Disable Spotlight
+entities.OzmasOddities/SpotlightController.attributes.description.disableSpotlight= Disables the spotlight completely. Equivalent to 0 duration.
+entities.OzmasOddities/SpotlightController.attributes.name.color= Wipe Color
+entities.OzmasOddities/SpotlightController.attributes.description.color= Modifies the color of the spotlight wipe
+
+entities.OzmasOddities/ParallaxDecal.placements.name.ParallaxDecal= Parallax Decal
+entities.OzmasOddities/ParallaxDecal.placements.description.ParallaxDecal= A decal with modifiable X and Y parallax values. Similar to the effect in the decal registry
+entities.OzmasOddities/ParallaxDecal.attributes.name.ParallaxX= X Parallax
+entities.OzmasOddities/ParallaxDecal.attributes.description.ParallaxX= X parallax modifier
+entities.OzmasOddities/ParallaxDecal.attributes.name.ParallaxY= Y Parallax
+entities.OzmasOddities/ParallaxDecal.attributes.description.ParallaxY= Y parallax modifier
+entities.OzmasOddities/ParallaxDecal.attributes.name.Path= Decal Path
+entities.OzmasOddities/ParallaxDecal.attributes.description.Path= Path relative to Gameplay/decals/
+entities.OzmasOddities/ParallaxDecal.attributes.name.Color= Tint Color
+entities.OzmasOddities/ParallaxDecal.attributes.description.Color= The RGBa value of the decal tint
+entities.OzmasOddities/ParallaxDecal.attributes.name.ScaleX= X Scale
+entities.OzmasOddities/ParallaxDecal.attributes.description.ScaleX= The scale along the X-axis
+entities.OzmasOddities/ParallaxDecal.attributes.name.ScaleY= Y Scale
+entities.OzmasOddities/ParallaxDecal.attributes.description.ScaleY= The scale along the Y-axis
+entities.OzmasOddities/ParallaxDecal.attributes.name.Rotation= Rotation (degrees)
+entities.OzmasOddities/ParallaxDecal.attributes.description.Rotation= Rotation in degrees, up to 360
+entities.OzmasOddities/ParallaxDecal.attributes.name.Depth= Depth
+entities.OzmasOddities/ParallaxDecal.attributes.description.Depth= The decal's depth in the game. Lower numbers are visible on top of higher numbers
+
+entities.OzmasOddities/IdleSoundController.placements.name.IdleSoundController= Idle Sound Controller
+entities.OzmasOddities/IdleSoundController.placements.description.IdleSoundController= Allows disabling of one or more of Madeline's idle sounds
+
+entities.OzmasOddities/SnapshotController.placements.name.SnapshotController= Snapshot Controller
+entities.OzmasOddities/SnapshotController.placements.description.SnapshotController= Allows music to play at regular volume during dialogs and while the game is paused
+
+entities.OzmasOddities/UnpauseController.placements.name.UnpauseController= Unpause Controller
+entities.OzmasOddities/UnpauseController.placements.description.UnpauseController= Unpauses the game if the specified flag is true
+entities.OzmasOddities/UnpauseController.attributes.name.flag= Flag
+entities.OzmasOddities/UnpauseController.attributes.description.flag= The flag to check against
+
+triggers.OzmasOddities/MusicFadeToTrigger.placements.name.MusicFadeToTrigger= Music Fade To Trigger
+triggers.OzmasOddities/MusicFadeToTrigger.placements.description.MusicFadeToTrigger= Fades a given parameter from its current value to a specified value
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.fadeTo= Fade Target
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.description.fadeTo= The parameter value to fade to
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.parameter= Parameter
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.description.parameter= The music parameter to target
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.positionMode= Position Mode
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.description.positionMode= How Madeline interacts with the trigger
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.revertOnLeave= Revert on Leave
+triggers.OzmasOddities/MusicFadeToTrigger.attributes.description.revertOnLeave=  Whether or not the value should reset when you exit the trigger
+
+triggers.OzmasOddities/DarknessFadeToTrigger.placements.name.DarknessFadeToTrigger= Darkness Fade To Trigger
+triggers.OzmasOddities/DarknessFadeToTrigger.placements.description.DarknessFadeToTrigger= Fades darkness alpha from its current value to a specified value
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.name.fadeTo= Fade Target
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.description.fadeTo= The darkness alpha value to fade to
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.name.positionMode= Position Mode
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.description.positionMode= How Madeline interacts with the trigger
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.name.revertOnLeave= Revert on Leave
+triggers.OzmasOddities/DarknessFadeToTrigger.attributes.description.revertOnLeave= Whether or not the value should reset when you exit the trigger
+
+triggers.OzmasOddities/FlagIfParamTrigger.placements.name.FlagIfParamTrigger= Flag If Param Trigger
+triggers.OzmasOddities/FlagIfParamTrigger.placements.description.FlagIfParamTrigger= Sets a flag if a given parameter equals a given value
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.name.flag= Flag
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.description.flag= The flag to set
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.name.paramValue= Parameter Value
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.description.paramValue= The target value of the music parameter
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.name.parameter= Parameter
+triggers.OzmasOddities/FlagIfParamTrigger.attributes.description.parameter= The music parameter to compare against
+
+triggers.AltMusicTrigger.placements.description/AltMusicTrigger= Plays alternate music in a scene while keeping the main music on standby

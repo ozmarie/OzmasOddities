@@ -1,2 +1,2 @@
 # OzmasOddities
-A collection of niche tools for Celeste custom maps
+Replace with your mod's readme!
