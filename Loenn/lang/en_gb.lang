@@ -45,6 +45,9 @@ entities.OzmasOddities/UnpauseController.placements.description.UnpauseControlle
 entities.OzmasOddities/UnpauseController.attributes.name.flag= Flag
 entities.OzmasOddities/UnpauseController.attributes.description.flag= The flag to check against
 
+entities.OzmasOddities/IntermittentSoundSource.placements.name.IntermittentSoundSource= Intermittent Sound Source
+entities.OzmasOddities/IntermittentSoundSource.placements.description.IntermittentSoundSource= Plays a sound repeatedly with a variable delay between sounds
+
 triggers.OzmasOddities/MusicFadeToTrigger.placements.name.MusicFadeToTrigger= Music Fade To Trigger
 triggers.OzmasOddities/MusicFadeToTrigger.placements.description.MusicFadeToTrigger= Fades a given parameter from its current value to a specified value
 triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.fadeTo= Fade Target

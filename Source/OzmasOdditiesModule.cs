@@ -29,8 +29,9 @@ public class OzmasOdditiesModule : EverestModule {
     }
 
     public override void Load() {
-        On.Celeste.Textbox.ctor_string_Language_Func1Array += SnapshotController.ModDialogSnapshot;
         On.Celeste.Level.StartPauseEffects += SnapshotController.ModPauseSnapshot;
+        On.Celeste.Textbox.ctor_string_Language_Func1Array += SnapshotController.ModDialogSnapshot;
+        On.Celeste.MiniTextbox.ctor += SnapshotController.ModMiniDialogSnapshot;
         On.Celeste.SpotlightWipe.Render += SpotlightController.NewWipeRender;
         On.Celeste.SpotlightWipe.ctor += SpotlightController.NewWipeCtor;
         IdleSoundController.hook_KillScratch = new ILHook(
@@ -45,8 +46,9 @@ public class OzmasOdditiesModule : EverestModule {
     }
 
     public override void Unload() {
-        On.Celeste.Textbox.ctor_string_Language_Func1Array -= SnapshotController.ModDialogSnapshot;
         On.Celeste.Level.StartPauseEffects -= SnapshotController.ModPauseSnapshot;
+        On.Celeste.Textbox.ctor_string_Language_Func1Array -= SnapshotController.ModDialogSnapshot;
+        On.Celeste.MiniTextbox.ctor -= SnapshotController.ModMiniDialogSnapshot;
         On.Celeste.SpotlightWipe.Render -= SpotlightController.NewWipeRender;
         On.Celeste.SpotlightWipe.ctor -= SpotlightController.NewWipeCtor;
         IdleSoundController.hook_KillScratch?.Dispose();

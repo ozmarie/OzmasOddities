@@ -6,10 +6,11 @@ SnapshotController.placements = {
     name = "SnapshotController",
     data = {
         disablePauseSnapshot = false,
-        disableDialogSnapshot = false
+        disableDialogSnapshot = false,
+        disableMiniDialogSnapshot = false
     }
 }
 
-SnapshotController.fieldOrder = {"x", "y", "disablePauseSnapshot", "disableDialogSnapshot"}
+SnapshotController.fieldOrder = {"x", "y", "disablePauseSnapshot", "disableDialogSnapshot", "disableMiniDialogSnapshot"}
 
 return SnapshotController
