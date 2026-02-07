@@ -1,6 +1,13 @@
 - Name: OzmasOddities
-  Version: 0.6.1
+  Version: 0.6.2
   DLL: bin/OzmasOddities.dll
   Dependencies:
-    - Name: EverestCore
+    - Name: Everest
       Version: 1.5577.0
+  OptionalDependencies:
+    - Name: Anonhelper
+      Version: 1.1.1
+    - Name: CherryHelper
+      Version: 1.8.2
+    - Name: CommunalHelper
+      Version: 1.24.4

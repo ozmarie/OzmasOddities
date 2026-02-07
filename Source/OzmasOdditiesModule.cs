@@ -27,6 +27,9 @@ public class OzmasOdditiesModule : EverestModule {
         Logger.SetLogLevel(nameof(OzmasOdditiesModule), LogLevel.Info);
 #endif
     }
+    public static bool hasAnonHelper;
+    public static bool hasCherryHelper;
+    public static bool hasCommunalHelper;
 
     public override void Load() {
         On.Celeste.Level.StartPauseEffects += SnapshotController.ModPauseSnapshot;
@@ -43,6 +46,24 @@ public class OzmasOdditiesModule : EverestModule {
         IdleSoundController.hook_KillKnuckles = new ILHook(
             typeof(Player).GetMethod("<.ctor>b__280_2", BindingFlags.NonPublic | BindingFlags.Instance),
             IdleSoundController.KillIdleCrackKnuckles);
+        EverestModuleMetadata anonHelper = new()
+        {
+            Name = "AnonHelper",
+            Version = new Version(1,1,1)
+        };
+        EverestModuleMetadata cherryHelper = new()
+        {
+            Name = "CherryHelper",
+            Version = new Version(1, 8, 2)
+        };
+        EverestModuleMetadata communalHelper = new()
+        {
+            Name = "CommunalHelper",
+            Version = new Version(1, 24, 4)
+        };
+        hasAnonHelper = Everest.Loader.DependencyLoaded(anonHelper);
+        hasCherryHelper = Everest.Loader.DependencyLoaded(cherryHelper);
+        hasCommunalHelper = Everest.Loader.DependencyLoaded(communalHelper);
     }
 
     public override void Unload() {
