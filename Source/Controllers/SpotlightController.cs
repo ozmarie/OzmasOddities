@@ -7,6 +7,7 @@ using FMOD.Studio;
 namespace Celeste.Mod.OzmasOddities.Controllers
 {
     [CustomEntity("OzmasOddities/SpotlightController")]
+    [Tracked]
     public class SpotlightController : Entity
     {
         private bool disable;
@@ -27,7 +28,7 @@ namespace Celeste.Mod.OzmasOddities.Controllers
         public static void NewWipeCtor(On.Celeste.SpotlightWipe.orig_ctor orig, SpotlightWipe self, Scene scene, bool wipeIn, Action onComplete = null)
         {
             orig(self, scene, wipeIn, onComplete);
-            SpotlightController ctrl = (scene as Level).Entities.FindFirst<SpotlightController>();
+            SpotlightController ctrl = scene.Tracker?.GetEntity<SpotlightController>();
             if (ctrl != null)
             {
                 if (self.sfx != null)
@@ -49,7 +50,7 @@ namespace Celeste.Mod.OzmasOddities.Controllers
         }
         public static void NewWipeRender(On.Celeste.SpotlightWipe.orig_Render orig, SpotlightWipe self, Scene scene)
         {
-            SpotlightController ctrl = (scene as Level).Entities.FindFirst<SpotlightController>();
+            SpotlightController ctrl = scene.Tracker?.GetEntity<SpotlightController>();
             if (ctrl == null) { orig(self, scene); } else
             {
                 float num = (self.WipeIn ? self.Percent : (1f - self.Percent));

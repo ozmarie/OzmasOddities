@@ -1,0 +1,3 @@
+ozmas_test_dialog=
+[MADELINE left sad]
+I hope this works

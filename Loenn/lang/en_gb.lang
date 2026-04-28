@@ -48,6 +48,13 @@ entities.OzmasOddities/UnpauseController.attributes.description.flag= The flag t
 entities.OzmasOddities/IntermittentSoundSource.placements.name.IntermittentSoundSource= Intermittent Sound Source
 entities.OzmasOddities/IntermittentSoundSource.placements.description.IntermittentSoundSource= Plays a sound repeatedly with a variable delay between sounds
 
+triggers.OzmasOddities/CustomDashRemover.placements.name.CustomDashRemover= Custom Dash Remover
+triggers.OzmasOddities/CustomDashRemover.placements.description.CustomDashRemover= Allows removal of custom dashes from various helpers
+triggers.OzmasOddities/CustomDashRemover.attributes.description.ClearCloudDash= From Anon Helper
+triggers.OzmasOddities/CustomDashRemover.attributes.description.ClearShadowDash= From Cherry Helper
+triggers.OzmasOddities/CustomDashRemover.attributes.description.ClearDreamDash= From Communal Helper
+triggers.OzmasOddities/CustomDashRemover.attributes.description.ClearShatterDash= From Chrono Helper
+
 triggers.OzmasOddities/MusicFadeToTrigger.placements.name.MusicFadeToTrigger= Music Fade To Trigger
 triggers.OzmasOddities/MusicFadeToTrigger.placements.description.MusicFadeToTrigger= Fades a given parameter from its current value to a specified value
 triggers.OzmasOddities/MusicFadeToTrigger.attributes.name.fadeTo= Fade Target

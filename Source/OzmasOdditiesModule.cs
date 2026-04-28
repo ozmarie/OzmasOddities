@@ -2,6 +2,7 @@
 using Celeste.Mod.OzmasOddities.Controllers;
 using System.Reflection;
 using MonoMod.RuntimeDetour;
+using Monocle;
 
 namespace Celeste.Mod.OzmasOddities;
 
@@ -27,9 +28,11 @@ public class OzmasOdditiesModule : EverestModule {
         Logger.SetLogLevel(nameof(OzmasOdditiesModule), LogLevel.Info);
 #endif
     }
+    public static SpriteBank OddSpriteBank;
     public static bool hasAnonHelper;
     public static bool hasCherryHelper;
     public static bool hasCommunalHelper;
+    public static bool hasChronoHelper;
 
     public override void Load() {
         On.Celeste.Level.StartPauseEffects += SnapshotController.ModPauseSnapshot;
@@ -61,9 +64,15 @@ public class OzmasOdditiesModule : EverestModule {
             Name = "CommunalHelper",
             Version = new Version(1, 24, 4)
         };
+        EverestModuleMetadata chronoHelper = new()
+        {
+            Name = "ChronoHelper",
+            Version = new Version(1, 2, 8)
+        };
         hasAnonHelper = Everest.Loader.DependencyLoaded(anonHelper);
         hasCherryHelper = Everest.Loader.DependencyLoaded(cherryHelper);
         hasCommunalHelper = Everest.Loader.DependencyLoaded(communalHelper);
+        hasChronoHelper = Everest.Loader.DependencyLoaded(chronoHelper);
     }
 
     public override void Unload() {
@@ -75,5 +84,11 @@ public class OzmasOdditiesModule : EverestModule {
         IdleSoundController.hook_KillScratch?.Dispose();
         IdleSoundController.hook_KillSneeze?.Dispose();
         IdleSoundController.hook_KillKnuckles?.Dispose();
+    }
+
+    public override void LoadContent(bool firstLoad)
+    {
+        base.LoadContent(firstLoad);
+        OddSpriteBank = new SpriteBank(GFX.Game, "Graphics/OzmasOddities/Sprites.xml");
     }
 }

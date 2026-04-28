@@ -6,7 +6,8 @@ CustomDashRemover.placements = {
     data = {
         ClearCloudDash = true,
         ClearShadowDash = true,
-        ClearDreamDash = true
+        ClearDreamDash = true,
+        ClearShatterDash = true
     }
 }
 
