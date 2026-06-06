@@ -12,6 +12,8 @@ A small collection of extremely niche triggers and entities. Please use the issu
 
 * **Snapshot Controller:** Allows you to disable the snapshots which lower the music volume during dialog and pausing.
 
+* **Intermittent Sound Source:** Plays a sound effect at random times within a specified window. Includes options to also vary the volume, and apply parameters. Can be flag-controllable.
+
 ## Triggers
 * **Music Fade To Trigger:** Fade any music parameter you want without specifying a starting value. It will just start wherever it's already at. Useful for situations where a parameter value can vary arbitrarily.
 
@@ -20,4 +22,6 @@ A small collection of extremely niche triggers and entities. Please use the issu
 * **Flag if Param Trigger:** Sets a flag if a music parameter is set to a specific value. I don't even remember why I made this!
 
 * **Alt Music Trigger:** Exactly like the Alt Music Trigger that comes bundled with Lönn, except this one only includes tracks that actually work!
+
+* **Custom Dash Remover:** Removes the effects of the specified custom dash refills. Options include Cloud Dash, Shadow Dash, Dream Dash, and Shatter Dash.
 
